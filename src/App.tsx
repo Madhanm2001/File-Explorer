@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Folder from './component/folder';
-import File from './component/file';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
@@ -300,7 +299,7 @@ function App() {
 
   return (
     <div style={{ padding: '0 10px' }}>
-      <h2 style={{ textAlign: 'center', color: 'white' }}>File Explorer</h2>
+      <h2 style={{ textAlign: 'center', color: 'white', fontFamily:'cursive' }}>File Explorer</h2>
       {arrayObj && arrayObj.map((data, id) => {
         console.log("count", id, arrayObj.length)
         const currObj = { [data.folderName]: data.folder }

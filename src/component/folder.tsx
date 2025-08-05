@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import File from './file'
 import '../App.css'
 // Folder collapsed icon
@@ -62,14 +62,14 @@ setFolderArray(temp)
             {!folder.fileId&&(!folder.isclose?<div style={{display:'flex',gap:'10px',marginLeft:`${folder.marginLeft}px`}}>
                 <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}} id='folder'>
                     <div onClick={()=>{updateFunction('toggleFolder',folder.folderId,folder.isToggle)}} style={{display:'flex',gap:'5px',cursor:'pointer'}}>
-                    <p style={{marginTop:'18px'}}>{folder.isToggle?<MdExpandLess style={{color:'white'}} size={18} />:<MdExpandMore style={{color:'white'}} size={18} />}</p>
-                    <h1 style={{color:'white',fontSize:'17px',fontFamily:'sans-serif',marginTop:'17px',wordBreak:'break-word'}}>{folder.folder}</h1>
+                    <p style={{marginTop:'18px'}}>{folder.isToggle?<MdExpandLess style={{color:'skyblue'}} size={18} />:<MdExpandMore style={{color:'white'}} size={18} />}</p>
+                    <h1 style={{color:'#ABABAB',fontSize:'17px',fontFamily:'sans-serif',marginTop:'17px',wordBreak:'break-word'}}>{folder.folder}</h1>
                     </div>
-                <div style={{display:'flex',marginTop:'18px',gap:'10px'}}><FiFolderPlus onClick={()=>{updateFunction('addFolder',folder.folderId,"","","mango","")}} style={{color:'#0CBA00',cursor:'pointer'}} size={18}/><AiOutlineFileAdd onClick={()=>updateFunction('addFile',folder.folderId,"","","","Ben 10")} style={{color:'yellow',cursor:'pointer'}} size={18}/><MdDeleteOutline onClick={()=>{updateFunction('deleteFolder',folder.folderId)}}  style={{color:'red',cursor:'pointer'}} size={18}/></div></div>
+                <div style={{display:'flex',marginTop:'18px',gap:'10px'}}><FiFolderPlus onClick={()=>{updateFunction('addFolder',folder.folderId,"","","mango","")}} style={{color:'yellow',cursor:'pointer'}} size={18}/><AiOutlineFileAdd onClick={()=>updateFunction('addFile',folder.folderId,"","","","Ben 10")} style={{color:'orange',cursor:'pointer'}} size={18}/><MdDeleteOutline onClick={()=>{updateFunction('deleteFolder',folder.folderId)}}  style={{color:'red',cursor:'pointer'}} size={18}/></div></div>
                 </div>:'')}
                  {/* {folder.isToggle&&<hr style={{color:'grey',width:'auto'}}/>} */}
             {((folder.isToggle && !folder.isclose) || folder.fileId) &&
-            <li style={{marginLeft:`${folder.fileId?0:folder.marginLeft}px`}}>
+            <li style={{marginLeft:`${folder.fileId?10:folder.marginLeft}px`}}>
                 <File folder={folder} updateFunction={updateFunction}/>
             </li>}
            </li> 
