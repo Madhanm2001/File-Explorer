@@ -65,7 +65,7 @@ setFolderArray(temp)
                     <p style={{marginTop:'18px'}}>{folder.isToggle?<MdExpandLess style={{color:'white'}} size={18} />:<MdExpandMore style={{color:'white'}} size={18} />}</p>
                     <h1 style={{color:'white',fontSize:'17px',fontFamily:'sans-serif',marginTop:'17px',wordBreak:'break-word'}}>{folder.folder}</h1>
                     </div>
-                <div style={{display:'flex',marginTop:'18px',gap:'10px'}}><AiOutlineFileAdd onClick={()=>updateFunction('addFile',folder.folderId,"","","","Ben 10")} style={{color:'yellow',cursor:'pointer'}} size={18}/><FiFolderPlus onClick={()=>{updateFunction('addFolder',folder.folderId,"","","mango","")}} style={{color:'#0CBA00',cursor:'pointer'}} size={18}/><MdDeleteOutline onClick={()=>{updateFunction('deleteFolder',folder.folderId)}}  style={{color:'red',cursor:'pointer'}} size={18}/></div></div>
+                <div style={{display:'flex',marginTop:'18px',gap:'10px'}}><FiFolderPlus onClick={()=>{updateFunction('addFolder',folder.folderId,"","","mango","")}} style={{color:'#0CBA00',cursor:'pointer'}} size={18}/><AiOutlineFileAdd onClick={()=>updateFunction('addFile',folder.folderId,"","","","Ben 10")} style={{color:'yellow',cursor:'pointer'}} size={18}/><MdDeleteOutline onClick={()=>{updateFunction('deleteFolder',folder.folderId)}}  style={{color:'red',cursor:'pointer'}} size={18}/></div></div>
                 </div>:'')}
                  {/* {folder.isToggle&&<hr style={{color:'grey',width:'auto'}}/>} */}
             {((folder.isToggle && !folder.isclose) || folder.fileId) &&

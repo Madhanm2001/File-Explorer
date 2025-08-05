@@ -187,7 +187,7 @@ function App() {
 
         if (copy[key].folderId == id) {
 
-          copy[key][name]={folderId:uuidv4(),files: [{ name: 'first.html', id: uuidv4() }, { name: 'index.html', id: uuidv4() }, { name: 'index.html', id: uuidv4() }],isToggle:false,isclose:!copy[key].isToggle}
+          copy[key][name]={folderId:uuidv4(),files: [],isToggle:false,isclose:!copy[key].isToggle}
           break;
 
 
