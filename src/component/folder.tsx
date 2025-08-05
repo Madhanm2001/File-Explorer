@@ -17,7 +17,7 @@ import { FiFolderPlus } from "react-icons/fi";
 import { AiOutlineFileAdd } from "react-icons/ai";
 
 
-const Folder = ({ folderObj ,updateFunction,onDeleteFile}: any) => {
+const Folder = ({ folderObj ,updateFunction}: any) => {
     console.log(folderObj,"kkkkkkkkkkkkk")
     // const [files, setFiles] = useState<any[]>([])
     const [folderArray, setFolderArray] = useState<any[]>([])
