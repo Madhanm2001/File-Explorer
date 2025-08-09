@@ -185,12 +185,11 @@ function App() {
       if (typeof (copy[key]) == 'object' && !Array.isArray(copy[key])) {
 
         if (copy[key].folderId == id) {
-
+          if(!copy[key][name]){
           copy[key][name]={folderId:uuidv4(),files: [],isToggle:false,isclose:!copy[key].isToggle}
+             
+          }
           break;
-
-
-
         }
 
         if (typeof (copy[key]) == 'object' && !Array.isArray(copy[key]))
